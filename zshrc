@@ -33,6 +33,7 @@ bindkey "^P" history-search-backward
 bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
+bindkey '^r' history-beginning-search-backward
 
 # expand functions in the prompt
 setopt prompt_subst
@@ -52,3 +53,18 @@ export EYRC=./.eyrc
 # automatically pushd
 setopt auto_pushd
 export dirstacksize=5
+
+# Allows me to cd into projects
+cdpath=(. ~/code/thoughtbot/ ~/code/play/ ~/code/src/)
+
+# prediction
+autoload predict-on
+zle -N predict-on
+zle -N predict-off
+bindkey '^Z'   predict-on
+bindkey '^X^Z' predict-off
+zstyle ':predict' verbose true
+
+PATH=~/bin:~/bin/scripts:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
+
+if [[ -s /Users/hgimenez/.rvm/scripts/rvm ]] ; then source /Users/hgimenez/.rvm/scripts/rvm ; fi

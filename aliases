@@ -3,6 +3,7 @@ alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump 
 alias remongrate="rake mongoid:migrate && rake mongoid:migrate:redo"
 alias g="git"
 alias s="bundle exec rspec --format=documentation"
+alias t="ruby -Itest -iruby-debug"
 alias cuc="bundle exec cucumber --format=pretty"
 alias gadd="git add -u && git add . && git status"
 alias cadd="git add -u && git add . && git commit -v"

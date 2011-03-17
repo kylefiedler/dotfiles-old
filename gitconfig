@@ -34,13 +34,10 @@
   who = shortlog -n -s --no-merges
   unfuck = reset --hard HEAD
 
-[github]
-  user = hgimenez
-  token = 3ab3560165192a0998dc06e025847910
 [user]
   name = Harold Giménez
   email = hgimenez@thoughtbot.com
 [branch "master"]
   rebase = true
 [remote "origin"]
-	push = HEAD
+  push = HEAD

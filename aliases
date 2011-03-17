@@ -27,3 +27,8 @@ alias rc="rails c"
 alias rg="rails g"
 alias rdb="rails db"
 alias :q="exit"
+
+alias lsa='ls -lah'
+alias l='ls -la'
+alias ll='ls -l'
+alias md='mkdir -p'

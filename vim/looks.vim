@@ -16,13 +16,15 @@ set list                          " show trailing whiteshace and tabs
 
 set guifont=Anonymous\ Pro:h16
 set t_Co=256
+set background=dark
 ":colorscheme vividchalk
 ":colorscheme neon
 ":colorscheme xoria256
-:colorscheme wombat
+":colorscheme wombat
 ":colorscheme zenburn
 ":colorscheme darkspectrum
 ":colorscheme customtwilight2
+:colorscheme solarized
 if has('gui_running')
   set guioptions-=T              " Remove toolbar and menus in gvim
   set guioptions-=m

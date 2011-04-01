@@ -20,7 +20,6 @@ source $HOME/.vim/backups.vim
 source $HOME/.vim/looks.vim
 source $HOME/.vim/searching.vim
 source $HOME/.vim/abbreviations.vim
-source $HOME/.vim/rubyblocks.vim
 source $HOME/.vim/githelpers.vim
 source $HOME/.vim/autocomplete.vim
 source $HOME/.vim/session.vim

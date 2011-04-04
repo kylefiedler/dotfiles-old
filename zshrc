@@ -48,8 +48,8 @@ export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 # ignore duplicate history entries
 setopt histignoredups
 
-# keep more history
-export HISTSIZE=1000
+# keep TONS of history
+export HISTSIZE=4096
 
 # look for ey config in project dirs
 export EYRC=./.eyrc
@@ -72,3 +72,14 @@ zstyle ':predict' verbose true
 PATH=~/bin:~/bin/scripts:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
 
 if [[ -s /Users/hgimenez/.rvm/scripts/rvm ]] ; then source /Users/hgimenez/.rvm/scripts/rvm ; fi
+
+# awesome cd movements from zshkit
+setopt AUTOCD
+setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
+setopt cdablevars
+
+# Try to correct command line spelling
+setopt CORRECT CORRECT_ALL
+
+# Enable extended globbing
+setopt EXTENDED_GLOB

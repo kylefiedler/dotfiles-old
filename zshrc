@@ -16,6 +16,11 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
+# functions
+if [ -e "$HOME/.functions" ]; then
+  source "$HOME/.functions"
+fi
+
 # vi mode
 bindkey -v
 bindkey "^F" vi-cmd-mode
@@ -64,6 +69,6 @@ bindkey '^Z'   predict-on
 bindkey '^X^Z' predict-off
 zstyle ':predict' verbose true
 
-PATH=~/bin:~/bin/scripts:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
+PATH=~/bin:~/bin/scripts:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
 
 if [[ -s /Users/hgimenez/.rvm/scripts/rvm ]] ; then source /Users/hgimenez/.rvm/scripts/rvm ; fi

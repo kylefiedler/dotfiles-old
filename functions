@@ -1,0 +1,21 @@
+function rs {
+  if [ -e script/rails ]; then
+    script/rails server $@
+  else
+    script/server $@
+  fi
+}
+function rc {
+  if [ -e script/rails ]; then
+    script/rails console $@
+  else
+    script/console $@
+  fi
+}
+function rg {
+  if [ -e script/rails ]; then
+    script/rails generate $@
+  else
+    script/generate $@
+  fi
+}

@@ -16,24 +16,18 @@ set list                          " show trailing whiteshace and tabs
 
 set guifont=Anonymous\ Pro:h16
 set t_Co=256
-set background=dark
-":colorscheme vividchalk
-":colorscheme neon
-":colorscheme xoria256
-":colorscheme wombat
-":colorscheme zenburn
-":colorscheme darkspectrum
-":colorscheme customtwilight2
+"set background=dark
+":colorscheme mac_classic
 :colorscheme solarized
 if has('gui_running')
-  set guioptions-=T              " Remove toolbar and menus in gvim
+  set guioptions-=T
   set guioptions-=m
   set guioptions-=l
   set guioptions-=r
+  set guioptions-=R
+  set guioptions-=L
   set mousehide                  " Hide mouse after chars typed, only gvim
 endif
 
 set number
 set numberwidth=5
-
-

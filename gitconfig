@@ -15,6 +15,7 @@
 [alias]
   c = commit -m
   a = add
+  aa= !git add -u && git add . && git status
   di = diff
   dic = diff --cached
   pl = pull
@@ -33,6 +34,8 @@
   ir = !git rebase -i origin/master
   who = shortlog -n -s --no-merges
   unfuck = reset --hard HEAD
+  cob = checkout -b
+  rmb = !sh -c 'git branch -D $1 && git push origin :$1' -
 
 [user]
   name = Harold Giménez

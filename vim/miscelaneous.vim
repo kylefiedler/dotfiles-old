@@ -41,6 +41,10 @@ set pastetoggle=<F7>
 autocmd BufEnter *.haml setlocal cursorcolumn
 autocmd BufEnter *.scss setlocal cursorcolumn
 autocmd BufEnter *.less setlocal cursorcolumn
+autocmd BufEnter *.coffee setlocal cursorcolumn
+
+" Set ruby syntax for Gemfile
+autocmd BufNewFile,BufRead Gemfile setlocal filetype=ruby
 
 " go back to normal mode with jk or kj
 imap jk <Esc>

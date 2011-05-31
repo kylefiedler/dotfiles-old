@@ -33,7 +33,6 @@ bindkey "^P" history-search-backward
 bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
-bindkey '^r' history-beginning-search-backward
 
 # expand functions in the prompt
 setopt prompt_subst
@@ -81,9 +80,6 @@ if [[ -s /Users/hgimenez/.rvm/scripts/rvm ]] ; then source /Users/hgimenez/.rvm/
 setopt AUTOCD
 setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
 setopt cdablevars
-
-# Try to correct command line spelling
-setopt CORRECT CORRECT_ALL
 
 # Enable extended globbing
 setopt EXTENDED_GLOB

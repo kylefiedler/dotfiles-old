@@ -10,13 +10,5 @@ export GOOS=darwin
 # favor homebrew
 export PATH=/usr/local/bin:$PATH
 
-# bring in android tools
-export PATH=$PATH:/Users/qrush/Dev/android/platform-tools
-export PATH=$PATH:/Users/qrush/Dev/android/tools
-export ANDROID_SDK=/Users/qrush/Dev/android
-
-# code swarm it up
-export PATH=$PATH:/Users/qrush/Dev/java/code_swarm/bin
-
 # load history
 export HISTFILE=~/.history

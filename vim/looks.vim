@@ -14,11 +14,6 @@ set listchars=tab:>\ ,trail:•,extends:>,precedes:<,nbsp:+
 set list                          " show trailing whiteshace and tabs
 
 
-set guifont=Anonymous\ Pro:h16
-set t_Co=256
-"set background=dark
-":colorscheme mac_classic
-:colorscheme solarized
 if has('gui_running')
   set guioptions-=T
   set guioptions-=m
@@ -27,7 +22,12 @@ if has('gui_running')
   set guioptions-=R
   set guioptions-=L
   set mousehide                  " Hide mouse after chars typed, only gvim
+  set guifont=Anonymous\ Pro:h16
+  set t_Co=256
+  set background=dark
+  ":colorscheme mac_classic
+  :colorscheme solarized
 endif
 
-set number
 set numberwidth=5
+set relativenumber

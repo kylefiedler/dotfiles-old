@@ -7,3 +7,5 @@
 
 :iabbrev endash &#8212;
 :iabbrev ellips &#8230;
+
+:iabbrev "* "*"*80

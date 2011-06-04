@@ -13,6 +13,7 @@ set scrolloff=3                   " Provide three lines of context
 set autowrite                     " Automatically save before commands like :next
 set showcmd                       " display incomplete commands
 
+source $HOME/.vim/pathogen.vim
 source $HOME/.vim/miscelaneous.vim
 source $HOME/.vim/wrapping.vim
 source $HOME/.vim/copypaste.vim

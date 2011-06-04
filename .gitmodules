@@ -4,3 +4,6 @@
 [submodule "vim/bundle/extradite"]
 	path = vim/bundle/extradite
 	url = https://github.com/int3/vim-extradite.git
+[submodule "vim/bundle/rails-vim"]
+	path = vim/bundle/rails-vim
+	url = https://github.com/tpope/vim-rails.git

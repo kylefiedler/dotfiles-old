@@ -15,6 +15,7 @@ set showcmd                       " display incomplete commands
 
 source $HOME/.vim/pathogen.vim
 source $HOME/.vim/miscelaneous.vim
+source $HOME/.vim/number.vim
 source $HOME/.vim/wrapping.vim
 source $HOME/.vim/copypaste.vim
 source $HOME/.vim/backups.vim

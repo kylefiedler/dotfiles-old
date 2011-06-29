@@ -21,8 +21,8 @@ if has('gui_running')
   set guioptions-=r
   set guioptions-=R
   set guioptions-=L
-  set mousehide                  " Hide mouse after chars typed, only gvim
-  set guifont=Anonymous\ Pro:h16
+  set mousehide
+  set guifont=Bitstream\ Vera\ Sans\ Mono:h16
   set t_Co=256
   ":colorscheme mac_classic
   :colorscheme darkspectrum

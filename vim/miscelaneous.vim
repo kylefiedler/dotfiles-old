@@ -37,11 +37,13 @@ set ttimeoutlen=50                " Speed up <esc>
 " toggle past and nopaste
 set pastetoggle=<F7>
 
-" set cursorcolumn when editing HAML and others
+" set cursorcolumn on some files
 autocmd BufEnter *.haml setlocal cursorcolumn
 autocmd BufEnter *.scss setlocal cursorcolumn
 autocmd BufEnter *.less setlocal cursorcolumn
 autocmd BufEnter *.coffee setlocal cursorcolumn
+autocmd BufEnter *.html.erb setlocal cursorcolumn
+autocmd BufEnter *.jst setlocal cursorcolumn
 
 " Set ruby syntax for Gemfile
 autocmd BufNewFile,BufRead Gemfile setlocal filetype=ruby

@@ -22,8 +22,8 @@ function rg {
 
 function rake {
   if [ -e Gemfile ]; then
-    bundle exec rake
+    bundle exec rake $@
   else
-    rake
+    rake $@
   fi
 }

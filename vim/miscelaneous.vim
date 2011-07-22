@@ -12,6 +12,7 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType asc set fo+=crotqaw
 au BufRead,BufNewFile *.less set ft=css syntax=css3
 au BufRead,BufNewFile *.scss set ft=css syntax=css3
 au BufRead,BufNewFile *.css set ft=css syntax=css3

@@ -73,3 +73,16 @@ map <Leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 map <Leader>t :tabnew <C-R>=expand("%:p:h") . "/" <CR>
 
 autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
+
+map <F10> set fo+=crotqaw
+
+" Show syntax highlighting groups for word under cursor
+" http://vimcasts.org/episodes/creating-colorschemes-for-vim/
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+

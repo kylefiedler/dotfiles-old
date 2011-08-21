@@ -1,6 +1,6 @@
-alias migrate="rake db:migrate db:test:prepare"
-alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
-alias remongrate="rake mongoid:migrate && rake mongoid:migrate:redo"
+alias migrate="bundle exec rake db:migrate db:test:prepare"
+alias remigrate="bundle exec rake db:migrate && bundle exec rake db:migrate:redo && bundle exec rake db:schema:dump db:test:prepare"
+alias remongrate="bundle exec rake mongoid:migrate && bundle exec rake mongoid:migrate:redo"
 alias g="git"
 alias s="bundle exec rspec --format=documentation"
 alias t="ruby -Itest -iruby-debug"
@@ -8,7 +8,7 @@ alias cuc="bundle exec cucumber --format=pretty"
 alias gadd="git add -u && git add . && git status"
 alias cadd="git add -u && git add . && git commit -v"
 alias gi="gem install"
-alias gci="git pull --rebase && rake && git push"
+alias gci="git pull --rebase && bundle exec rake && git push"
 alias giv="gem install -v"
 alias tlf="tail -f"
 alias b="bundle"
@@ -33,3 +33,7 @@ alias lsa='ls -lah'
 alias l='ls -la'
 alias ll='ls -l'
 alias md='mkdir -p'
+
+alias rrake='/usr/bin/rake'
+
+alias bake='bundle exec rake'

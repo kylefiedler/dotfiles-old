@@ -27,3 +27,7 @@ function rg {
 #     command rake $@
 #   fi
 # }
+
+function :w {
+  print 'This is not vim'
+}

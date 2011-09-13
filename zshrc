@@ -64,14 +64,6 @@ export dirstacksize=5
 cdpath=(. ~/code/thoughtbot/ ~/code/play/ ~/code/src/)
 typeset -gU cdpath
 
-# prediction
-autoload predict-on
-zle -N predict-on
-zle -N predict-off
-bindkey '^Z'   predict-on
-bindkey '^X^Z' predict-off
-zstyle ':predict' verbose true
-
 PATH=~/bin:~/bin/scripts:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
 
 if [[ -s /Users/hgimenez/.rvm/scripts/rvm ]] ; then source /Users/hgimenez/.rvm/scripts/rvm ; fi

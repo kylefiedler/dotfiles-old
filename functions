@@ -20,13 +20,13 @@ function rg {
   fi
 }
 
-# function rake {
-#   if [ -e Gemfile ]; then
-#     bundle exec rake $@
-#   else
-#     command rake $@
-#   fi
-# }
+function rake {
+  if [ -e Gemfile ]; then
+    bundle exec rake $@
+  else
+    command rake $@
+  fi
+}
 
 function :w {
   print 'This is not vim'

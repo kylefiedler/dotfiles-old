@@ -24,8 +24,7 @@ if has('gui_running')
   set mousehide
   set guifont=Bitstream\ Vera\ Sans\ Mono:h16
   set t_Co=256
-  ":colorscheme mac_classic
-  :colorscheme ir_wombat
+  :colorscheme vylight
 endif
 
 set numberwidth=4

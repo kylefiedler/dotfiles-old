@@ -66,11 +66,12 @@ command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
       \ proident, sunt in culpa qui officia deserunt mollit anim id est
       \ laborum
 
+cnoremap %% <C-R>=expand('%:p:h').'/'<cr>
 " Opens an edit command with the path of the currently edited file filled in
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-map <Leader>s :split <C-R>=expand("%:p:h") . "/" <CR>
-map <Leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
-map <Leader>t :tabnew <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>e :e %%
+map <Leader>s :split %%
+map <Leader>v :vsplit %%
+map <Leader>t :tabnew %%
 
 autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
 

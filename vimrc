@@ -29,3 +29,4 @@ source $HOME/.vim/privates.vim
 source $HOME/.vim/buffers.vim
 source $HOME/.vim/tabularizing.vim
 source $HOME/.vim/ruby-blocks.vim
+source $HOME/.vim/windows.vim

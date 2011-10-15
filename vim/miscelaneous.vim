@@ -87,3 +87,5 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+" switch between last two files
+nnoremap <leader><leader> <c-^>

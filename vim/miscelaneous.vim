@@ -71,7 +71,7 @@ cnoremap %% <C-R>=expand('%:p:h').'/'<cr>
 map <Leader>e :e %%
 map <Leader>s :split %%
 map <Leader>v :vsplit %%
-map <Leader>t :tabnew %%
+" map <Leader>t :tabnew %%
 
 autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
 

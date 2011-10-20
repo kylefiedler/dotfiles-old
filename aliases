@@ -23,7 +23,6 @@ alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
 
 alias rv="mvim --remote"
-alias rs="rails s"
 alias rc="rails c"
 alias rg="rails g"
 alias rdb="rails db"

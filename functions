@@ -1,7 +1,12 @@
 function rs {
-  if [ -e script/rails ]; then
+  if [ -e Procfile ]; then
+    print 'Running foreman'
+    foreman start $@
+  elif [ -e script/rails ]; then
+    print 'Running Rails 3 server'
     script/rails server $@
   else
+    print 'Running Rails 2 server'
     script/server $@
   fi
 }

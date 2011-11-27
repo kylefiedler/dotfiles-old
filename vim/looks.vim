@@ -22,9 +22,10 @@ if has('gui_running')
   set guioptions-=R
   set guioptions-=L
   set mousehide
-  set guifont=Bitstream\ Vera\ Sans\ Mono:h16
+  set guifont=Anonymous\ Pro:h18
   set t_Co=256
-  :colorscheme github
+  set background=light
+  :colorscheme solarized
 endif
 
 set numberwidth=4

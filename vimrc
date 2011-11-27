@@ -27,6 +27,6 @@ source $HOME/.vim/autocomplete.vim
 source $HOME/.vim/session.vim
 source $HOME/.vim/privates.vim
 source $HOME/.vim/buffers.vim
-source $HOME/.vim/tabularizing.vim
 source $HOME/.vim/ruby-blocks.vim
 source $HOME/.vim/windows.vim
+source $HOME/.vim/mappings.vim

@@ -22,8 +22,15 @@ au BufRead,BufNewFile *.jst set ft=jst syntax=jst              " Set JST filetyp
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_klasses_in_global = 1
 let g:rubycomplete_rails = 1
+
 "clojure.vim
 let clj_highlight_builtins = 1
+
+" Set zen coding to new shortcut
+let g:user_zen_expandabbr_key = '<c-z>'
+let g:user_zen_settings = {
+'indentation' : '  '
+}
 
 " Set ruby syntax for Gemfile
 autocmd BufNewFile,BufRead Gemfile setlocal filetype=ruby

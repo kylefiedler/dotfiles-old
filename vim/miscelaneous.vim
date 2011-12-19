@@ -7,16 +7,18 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType erb set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType sass set omnifunc=csscomplete#CompleteCSS
 autocmd FileType scss set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType asc set fo+=crotqaw
+
 autocmd BufNewFile,BufRead *.html.erb set filetype=html        " Set ERB filetype to HTML
 
 au BufRead,BufNewFile *.css set ft=css syntax=css              " Set CSS filetype and sntax to CSS
-au BufRead,BufNewFile *.less set ft=scss syntax=scss           " Set LESS filetype and syntax to SCSS
-au BufRead,BufNewFile *.scss set ft=scss.css syntax=scss       " Set SCSS filetype and syntax to SCSS
+au BufRead,BufNewFile *.less set ft=scss.css syntax=scss           " Set LESS filetype and syntax to SCSS
+au BufRead,BufNewFile *.scss set ft=scss.css syntax=scss           " Set SCSS Filetype
 au BufRead,BufNewFile *.jst set ft=jst syntax=jst              " Set JST filetype and sntax to JST
 
 let g:rubycomplete_buffer_loading = 1
@@ -29,8 +31,8 @@ let clj_highlight_builtins = 1
 " Set zen coding to new shortcut
 let g:user_zen_expandabbr_key = '<c-z>'
 let g:user_zen_settings = {
-'indentation' : '  '
-}
+\  'indentation' : ' '
+\}
 
 " Set ruby syntax for Gemfile
 autocmd BufNewFile,BufRead Gemfile setlocal filetype=ruby

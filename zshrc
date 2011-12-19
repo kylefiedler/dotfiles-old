@@ -61,12 +61,12 @@ setopt auto_pushd
 export dirstacksize=5
 
 # Allows me to cd into projects
-cdpath=(. ~/code/thoughtbot/ ~/code/play/ ~/code/src/)
+cdpath=(. ~/Sites/ ~/Sites/other/ )
 typeset -gU cdpath
 
-PATH=~/bin:~/bin/scripts:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
+PATH=/usr/local/bin:~/bin:~/bin/scripts:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
 
-if [[ -s /Users/hgimenez/.rvm/scripts/rvm ]] ; then source /Users/hgimenez/.rvm/scripts/rvm ; fi
+if [[ -s /Users/kfiedler/.rvm/scripts/rvm ]] ; then source /Users/kfiedler/.rvm/scripts/rvm ; fi
 
 # awesome cd movements from zshkit
 setopt AUTOCD

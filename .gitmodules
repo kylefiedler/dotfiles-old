@@ -55,3 +55,6 @@
 [submodule "vim/bundle/zencoding-vim"]
 	path = vim/bundle/zencoding-vim
 	url = https://github.com/mattn/zencoding-vim.git
+[submodule "vim/bundle/taskpaper"]
+	path = vim/bundle/taskpaper
+	url = https://github.com/davidoc/taskpaper.vim.git

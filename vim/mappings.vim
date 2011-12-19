@@ -13,14 +13,18 @@ imap jk <Esc>
 imap kj <Esc>
 imap jj <Esc>
 imap kk <Esc>
+
 " Use command t
 map <Leader>g :CommandT<CR>
 
 " Opens an edit command with the path of the currently edited file filled in
-map <Leader>e :e %%
-map <Leader>s :split %%
-map <Leader>v :vsplit %%
-map <Leader>t :tabnew %%
+map <Leader>e :e %% <CR>
+map <Leader>s :split %% <CR>
+map <Leader>v :vsplit %% <CR>
+
+map <Leader>E :e <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>S :split <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>V :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 
 map <Leader>N :NERDTree <C-R>=expand("%:p:h") . "/" <CR>
 autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb

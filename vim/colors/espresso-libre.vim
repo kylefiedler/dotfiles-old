@@ -94,9 +94,9 @@ hi rubyRailsARMethod    guifg=#d71707 guibg=NONE gui=NONE
 hi rubyRailsRenderMethod  guifg=#d71707 guibg=NONE gui=NONE
 hi rubyRailsMethod      guifg=#d71707 guibg=NONE gui=NONE
 
-hi erubyDelimiter       guifg=NONE guibg=NONE gui=NONE
-hi erubyComment         guifg=#aaaaaa guibg=NONE gui=NONE
-hi erubyRailsMethod     guifg=#d71707 guibg=NONE gui=NONE
+" hi erubyDelimiter       guifg=NONE guibg=NONE gui=NONE
+" hi erubyComment         guifg=#aaaaaa guibg=NONE gui=NONE
+" hi erubyRailsMethod     guifg=#d71707 guibg=NONE gui=NONE
 
 hi htmlTag              guifg=#4f9eeb guibg=NONE gui=NONE
 hi htmlEndTag           guifg=#4f9eeb guibg=NONE gui=NONE
@@ -104,41 +104,41 @@ hi htmlTagName          guifg=#2f6f9f guibg=#f4faff gui=NONE
 hi htmlArg              guifg=#7653c1 guibg=#f3f2ff gui=NONE
 hi htmlSpecialChar      guifg=#7653c1 guibg=#f3f2ff gui=NONE
 
-hi javaScriptFunction   guifg=#2f6f9f guibg=#f4faff gui=NONE
-hi javaScriptRailsFunction  guifg=#d71707 guibg=NONE gui=NONE
-hi javaScriptBraces     guifg=NONE guibg=NONE gui=NONE
+" hi javaScriptFunction   guifg=#2f6f9f guibg=#f4faff gui=NONE
+" hi javaScriptRailsFunction  guifg=#d71707 guibg=NONE gui=NONE
+" hi javaScriptBraces     guifg=NONE guibg=NONE gui=NONE
 
-hi yamlKey              guifg=#2f6f9f guibg=#f5faff gui=NONE
-hi yamlAnchor           guifg=#7b8c4d guibg=NONE gui=NONE
-hi yamlAlias            guifg=#7b8c4d guibg=NONE gui=NONE
-hi yamlDocumentHeader   guifg=#73b00a guibg=#ffffff gui=NONE
+" hi yamlKey              guifg=#2f6f9f guibg=#f5faff gui=NONE
+" hi yamlAnchor           guifg=#7b8c4d guibg=NONE gui=NONE
+" hi yamlAlias            guifg=#7b8c4d guibg=NONE gui=NONE
+" hi yamlDocumentHeader   guifg=#73b00a guibg=#ffffff gui=NONE
 
-" Styles for css
-hi cssURL               guifg=#2A0C63 guibg=NONE gui=NONE
-hi cssFunctionName      guifg=#73b00a guibg=NONE gui=NONE
-hi cssClassName         guifg=#2A0C63 guibg=NONE gui=NONE
+" " Styles for css
+" hi cssURL               guifg=#2A0C63 guibg=NONE gui=NONE
+" hi cssFunctionName      guifg=#73b00a guibg=NONE gui=NONE
+" hi cssClassName         guifg=#2A0C63 guibg=NONE gui=NONE
 
-"hi cssColor             guifg=#389507 guibg=NONE gui=NONE
-"hi cssPseudoClassId     guifg=#2f6f9f guibg=NONE gui=NONE
-"hi cssValueLength       guifg=#7653c2 guibg=#f3f2ff gui=NONE
-hi cssCommonAttr         guifg=#CA333C guibg=NONE gui=NONE
+" "hi cssColor             guifg=#389507 guibg=NONE gui=NONE
+" "hi cssPseudoClassId     guifg=#2f6f9f guibg=NONE gui=NONE
+" "hi cssValueLength       guifg=#7653c2 guibg=#f3f2ff gui=NONE
+" hi cssCommonAttr         guifg=#CA333C guibg=NONE gui=NONE
 
-hi cssBraces            guifg=#696969 guibg=NONE gui=NONE
-hi cssTextProp          guifg=#73b00a guibg=NONE gui=NONE
-hi cssFontProp          guifg=#73b00a guibg=NONE gui=NONE
+" hi cssBraces            guifg=#696969 guibg=NONE gui=NONE
+" hi cssTextProp          guifg=#73b00a guibg=NONE gui=NONE
+" hi cssFontProp          guifg=#73b00a guibg=NONE gui=NONE
 
-hi cssColorAttr           guifg=#CA333C guibg=NONE gui=NONE
-hi cssBoxAttr             guifg=#CA333C guibg=NONE gui=NONE
-hi cssRenderAttr          guifg=#CA333C guibg=NONE gui=NONE
-hi cssAuralAttr           guifg=#CA333C guibg=NONE gui=NONE
-hi cssGeneratedContentAttr          guifg=#CA333C guibg=NONE gui=NONE
-hi cssPagingAttr          guifg=#CA333C guibg=NONE gui=NONE
-hi cssTableAttr           guifg=#CA333C guibg=NONE gui=NONE
-hi cssUIAttr              guifg=#CA333C guibg=NONE gui=NONE
-hi cssTextAttr            guifg=#CA333C guibg=NONE gui=NONE
-hi cssFontAttr            guifg=#CA333C guibg=NONE gui=NONE
-hi cssAuralAttr           guifg=#CA333C guibg=NONE gui=NONE
+" hi cssColorAttr           guifg=#CA333C guibg=NONE gui=NONE
+" hi cssBoxAttr             guifg=#CA333C guibg=NONE gui=NONE
+" hi cssRenderAttr          guifg=#CA333C guibg=NONE gui=NONE
+" hi cssAuralAttr           guifg=#CA333C guibg=NONE gui=NONE
+" hi cssGeneratedContentAttr          guifg=#CA333C guibg=NONE gui=NONE
+" hi cssPagingAttr          guifg=#CA333C guibg=NONE gui=NONE
+" hi cssTableAttr           guifg=#CA333C guibg=NONE gui=NONE
+" hi cssUIAttr              guifg=#CA333C guibg=NONE gui=NONE
+" hi cssTextAttr            guifg=#CA333C guibg=NONE gui=NONE
+" hi cssFontAttr            guifg=#CA333C guibg=NONE gui=NONE
+" hi cssAuralAttr           guifg=#CA333C guibg=NONE gui=NONE
 
-"Scss styles
-hi scssInclude          guifg=#527E08 guibg=NONE gui=NONE
-hi scssExtend           guifg=#527E08  guibg=NONE gui=NONE
+" "Scss styles
+" hi scssInclude          guifg=#527E08 guibg=NONE gui=NONE
+" hi scssExtend           guifg=#527E08  guibg=NONE gui=NONE

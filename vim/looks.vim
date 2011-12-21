@@ -24,9 +24,9 @@ if has('gui_running')
   set mousehide
   set guifont=Anonymous\ Pro:h18
   set t_Co=256
-  set background=light
-  :colorscheme solarized
+  set background=dark
+  :colorscheme Tomorrow-Night
 endif
 
 set numberwidth=4
-set relativenumber
+"set relativenumber

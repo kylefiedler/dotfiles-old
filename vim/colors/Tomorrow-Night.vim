@@ -245,8 +245,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("SpecialKey", s:selection, "", "")
 	call <SID>X("Search", s:background, s:yellow, "")
 	call <SID>X("TabLine", s:foreground, s:background, "reverse")
-	call <SID>X("StatusLine", s:foreground, s:background, "reverse")
-	call <SID>X("StatusLineNC", s:foreground, s:background, "reverse")
+	call <SID>X("StatusLine", "111111", s:foreground, "reverse")
+	call <SID>X("StatusLineNC", "111111", s:selection, "reverse")
+	call <SID>X("VertSplit", "111111", s:background, "reverse")
 	call <SID>X("Visual", "", s:selection, "")
 	call <SID>X("Directory", s:blue, "", "")
 	call <SID>X("ModeMsg", s:green, "", "")
@@ -277,7 +278,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Operator", s:aqua, "", "none")
 	call <SID>X("Type", s:blue, "", "none")
 	call <SID>X("Define", s:purple, "", "none")
-	call <SID>X("Include", s:blue, "", "") 
+	call <SID>X("Include", s:blue, "", "")
 	"call <SID>X("Ignore", "666666", "", "")
 	
 	" Vim Highlighting

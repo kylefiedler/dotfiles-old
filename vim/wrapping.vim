@@ -18,7 +18,7 @@ function! WrapIt()
   set wrap linebreak
   set virtualedit=
   set breakat=\ ^I!@*-+;:,./?       " when wrapping, break at these characters (requires linbreak, see above)
-  set showbreak=>                   " character to show that a line is wrapped
+  set showbreak=>>                   " character to show that a line is wrapped
   setlocal display+=lastline
   noremap  <buffer> <silent> k gk
   noremap  <buffer> <silent> j gj

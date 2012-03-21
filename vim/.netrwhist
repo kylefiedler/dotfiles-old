@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/kfiedler/Library/Application Support/SIMBL/Plugins/Maximizer.bundle'
+let g:netrw_dirhist_2='/Users/kfiedler/Desktop/nyke'
+let g:netrw_dirhist_3='/Users/kfiedler/Sites/other/dotfiles-old'

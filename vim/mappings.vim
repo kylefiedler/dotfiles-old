@@ -18,15 +18,14 @@ imap kk <Esc>
 map <Leader>g :CommandT<CR>
 
 " Opens an edit command with the path of the currently edited file filled in
-map <Leader>e :e %% <CR>
-map <Leader>s :split %% <CR>
-map <Leader>v :vsplit %% <CR>
-
-map <Leader>E :e <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>s :split <CR>
 map <Leader>S :split <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>v :vsplit <CR>
 map <Leader>V :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 
-map <Leader>N :NERDTree <C-R>=expand("%:p:h") . "/" <CR>
+" NERDTree
+map <Leader>n :NERDTree <C-R>=expand("%:p:h") . "/" <CR>
 autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
 
 " Unset highlighting
@@ -41,7 +40,9 @@ nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 " CSS Sorting
 vmap <Leader>1 :!sort<CR>
-map <Leader>2 ?{<CR>jV/^\s*\}\=$<CR>k:sort<CR>:let @/=''<CR>
+" map <Leader>2 ?{<CR>jV/^\s*\}\=$<CR>k:sort<CR>:let @/=''<CR>
+map <Leader>2 ?{<CR>jV}k!sortcss<CR>:noh<CR>
+map <Leader>3 !sortcss<CR>
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>

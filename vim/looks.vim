@@ -23,10 +23,13 @@ if has('gui_running')
   set guioptions-=L
   set mousehide
   set guifont=Anonymous\ Pro:h18
+"  set guifont=Inconsolata:h18
   set t_Co=256
   set background=dark
-  :colorscheme Tomorrow-Night
+  :colorscheme solarized
 endif
 
-set numberwidth=4
-"set relativenumber
+" Numbers
+set number                     " Normal Absolute line numbers by default
+"set relativenumber              " Relative Line Numbers by default
+set numberwidth=4               "set relativenumber

@@ -58,3 +58,9 @@
 [submodule "vim/bundle/taskpaper"]
 	path = vim/bundle/taskpaper
 	url = https://github.com/davidoc/taskpaper.vim.git
+[submodule "vim/bundle/vim-powerline"]
+	path = vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "vim/bundle/greplace"]
+	path = vim/bundle/greplace
+	url = https://github.com/vim-scripts/greplace.vim.git

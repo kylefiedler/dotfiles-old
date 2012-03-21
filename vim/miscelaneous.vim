@@ -59,6 +59,7 @@ autocmd BufEnter *.scss setlocal cursorcolumn
 autocmd BufEnter *.less setlocal cursorcolumn
 autocmd BufEnter *.coffee setlocal cursorcolumn
 autocmd BufEnter *.html.erb setlocal cursorcolumn
+autocmd BufEnter *.html setlocal cursorcolumn
 autocmd BufEnter *.jst setlocal cursorcolumn
 
 

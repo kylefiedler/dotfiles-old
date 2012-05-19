@@ -25,7 +25,7 @@ if has('gui_running')
   set guifont=Anonymous\ Pro:h18
 "  set guifont=Inconsolata:h18
   set t_Co=256
-  set background=dark
+  set background=light
   :colorscheme solarized
 endif
 

@@ -70,29 +70,29 @@ hi Todo                 guifg=#aaaaaa guibg=NONE gui=inverse,bold
 hi Type                 guifg=#d44950 guibg=NONE gui=NONE
 hi Underlined           guifg=NONE guibg=NONE gui=NONE
 
-hi rubyClass            guifg=#2f6f9f guibg=#f4faff gui=NONE
-hi rubyFunction         guifg=#3a1d72 guibg=NONE gui=NONE
-hi rubyInterpolationDelimiter  guifg=NONE guibg=NONE gui=NONE
-hi rubySymbol           guifg=#7653c1 guibg=#f3f2ff gui=NONE
-hi rubyConstant         guifg=#4e279a guibg=NONE gui=NONE
-hi rubyStringDelimiter  guifg=#73b00a guibg=#ffffff gui=NONE
-hi rubyBlockParameter   guifg=#7b8c4d guibg=NONE gui=NONE
-hi rubyInstanceVariable  guifg=#7b8c4d guibg=NONE gui=NONE
-hi rubyInclude          guifg=#2f6f9f guibg=#f4faff gui=NONE
-hi rubyGlobalVariable   guifg=#7b8c4d guibg=NONE gui=NONE
-hi rubyRegexp           guifg=#73b00a guibg=#ffffff gui=NONE
-hi rubyRegexpDelimiter  guifg=#73b00a guibg=#ffffff gui=NONE
-hi rubyEscape           guifg=#000000 guibg=#e8ffd5 gui=NONE
-hi rubyControl          guifg=#2f6f9f guibg=#f4faff gui=NONE
-hi rubyClassVariable    guifg=#7b8c4d guibg=NONE gui=NONE
-hi rubyOperator         guifg=#2f6f9f guibg=#f4faff gui=NONE
-hi rubyException        guifg=#2f6f9f guibg=#f4faff gui=NONE
-hi rubyPseudoVariable   guifg=#7b8c4d guibg=NONE gui=NONE
-hi rubyRailsUserClass   guifg=#4e279a guibg=NONE gui=NONE
-hi rubyRailsARAssociationMethod  guifg=#d71707 guibg=NONE gui=NONE
-hi rubyRailsARMethod    guifg=#d71707 guibg=NONE gui=NONE
-hi rubyRailsRenderMethod  guifg=#d71707 guibg=NONE gui=NONE
-hi rubyRailsMethod      guifg=#d71707 guibg=NONE gui=NONE
+" hi rubyClass            guifg=#2f6f9f guibg=#f4faff gui=NONE
+" hi rubyFunction         guifg=#3a1d72 guibg=NONE gui=NONE
+" hi rubyInterpolationDelimiter  guifg=NONE guibg=NONE gui=NONE
+" hi rubySymbol           guifg=#7653c1 guibg=#f3f2ff gui=NONE
+" hi rubyConstant         guifg=#4e279a guibg=NONE gui=NONE
+" hi rubyStringDelimiter  guifg=#73b00a guibg=#ffffff gui=NONE
+" hi rubyBlockParameter   guifg=#7b8c4d guibg=NONE gui=NONE
+" hi rubyInstanceVariable  guifg=#7b8c4d guibg=NONE gui=NONE
+" hi rubyInclude          guifg=#2f6f9f guibg=#f4faff gui=NONE
+" hi rubyGlobalVariable   guifg=#7b8c4d guibg=NONE gui=NONE
+" hi rubyRegexp           guifg=#73b00a guibg=#ffffff gui=NONE
+" hi rubyRegexpDelimiter  guifg=#73b00a guibg=#ffffff gui=NONE
+" hi rubyEscape           guifg=#000000 guibg=#e8ffd5 gui=NONE
+" hi rubyControl          guifg=#2f6f9f guibg=#f4faff gui=NONE
+" hi rubyClassVariable    guifg=#7b8c4d guibg=NONE gui=NONE
+" hi rubyOperator         guifg=#2f6f9f guibg=#f4faff gui=NONE
+" hi rubyException        guifg=#2f6f9f guibg=#f4faff gui=NONE
+" hi rubyPseudoVariable   guifg=#7b8c4d guibg=NONE gui=NONE
+" hi rubyRailsUserClass   guifg=#4e279a guibg=NONE gui=NONE
+" hi rubyRailsARAssociationMethod  guifg=#d71707 guibg=NONE gui=NONE
+" hi rubyRailsARMethod    guifg=#d71707 guibg=NONE gui=NONE
+" hi rubyRailsRenderMethod  guifg=#d71707 guibg=NONE gui=NONE
+" hi rubyRailsMethod      guifg=#d71707 guibg=NONE gui=NONE
 
 " hi erubyDelimiter       guifg=NONE guibg=NONE gui=NONE
 " hi erubyComment         guifg=#aaaaaa guibg=NONE gui=NONE

@@ -3,5 +3,6 @@ tags
 .swo
 *.scratch.*
 vim/.netrwhist
-.sass-cache
+*.sass-cache
 .DS_Store
+.scssc

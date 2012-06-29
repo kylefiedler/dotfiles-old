@@ -43,6 +43,7 @@ vmap <Leader>1 :!sort<CR>
 " map <Leader>2 ?{<CR>jV/^\s*\}\=$<CR>k:sort<CR>:let @/=''<CR>
 map <Leader>2 ?{<CR>jV}k!sortcss<CR>:noh<CR>
 map <Leader>3 !sortcss<CR>
+map <Leader>4 :g#\({\n\)\@<=#.,/}/sort<CR>
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>

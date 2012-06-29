@@ -5,6 +5,7 @@ nnoremap <C-y> 3<C-y>
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType erb set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType sass set omnifunc=csscomplete#CompleteCSS
@@ -20,6 +21,7 @@ au BufRead,BufNewFile *.css set ft=css syntax=css              " Set CSS filetyp
 au BufRead,BufNewFile *.less set ft=scss.css syntax=scss           " Set LESS filetype and syntax to SCSS
 au BufRead,BufNewFile *.scss set ft=scss.css syntax=scss           " Set SCSS Filetype
 au BufRead,BufNewFile *.jst set ft=jst syntax=jst              " Set JST filetype and sntax to JST
+au BufRead,BufNewFile *.php set ft=php.html syntax=html
 
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_klasses_in_global = 1

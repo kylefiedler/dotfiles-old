@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/kfiedler/Library/Application Support/SIMBL/Plugins/Maximizer.bundle'
 let g:netrw_dirhist_2='/Users/kfiedler/Desktop/nyke'
 let g:netrw_dirhist_3='/Users/kfiedler/Sites/other/dotfiles-old'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/Users/kfiedler/Library/Application Support/SIMBL/Plugins
 let g:netrw_dirhist_6='/Users/kfiedler/Dropbox/Design/Other/landingpad'
 let g:netrw_dirhist_7='/Users/kfiedler/Dropbox/Design/Atedrake/Clients/Current/Broadway Marketplace/Site'
 let g:netrw_dirhist_8='/Users/kfiedler/Sites/other/dotfiles/.git'
+let g:netrw_dirhist_9='/Users/kfiedler/Sites/edx/blog'

@@ -1,5 +1,6 @@
 # ADD LOCAL CONFIGURATION HERE
-
+[github]
+	user = kylefiedler
 
 # DO NOT EDIT BELOW THIS LINE
 [push]

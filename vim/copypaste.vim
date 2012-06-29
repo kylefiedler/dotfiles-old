@@ -8,4 +8,7 @@ imap ppp <ESC>pa
 cmap ppp <C-r>"
 
 " always indent after pasting
-"noremap p p=']
+noremap p p=']
+
+"Copy to OS clipboard
+set clipboard=unnamed

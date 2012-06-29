@@ -61,3 +61,6 @@
 [submodule "vim/bundle/greplace"]
 	path = vim/bundle/greplace
 	url = https://github.com/vim-scripts/greplace.vim.git
+[submodule "vim/bundle/vim-autoclose"]
+	path = vim/bundle/vim-autoclose
+	url = https://github.com/Townk/vim-autoclose.git

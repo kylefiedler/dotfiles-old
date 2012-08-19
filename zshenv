@@ -12,3 +12,5 @@ export PATH=/usr/local/bin:$PATH
 
 # load history
 export HISTFILE=~/.history
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

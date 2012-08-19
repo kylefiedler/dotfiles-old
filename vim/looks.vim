@@ -26,7 +26,7 @@ if has('gui_running')
 "  set guifont=Inconsolata:h18
   set t_Co=256
   set background=light
-  :colorscheme solarized
+  :colorscheme Tomorrow
 endif
 
 " Numbers

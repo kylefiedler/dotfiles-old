@@ -14,6 +14,7 @@ alias s="bundle exec rspec"
 alias gi="gem install"
 alias giv="gem install -v"
 alias tlf="tail -f"
+alias rmpyc="find . -name '*.pyc' -delete"
 
 alias clearlog='cat /dev/null > log/cucumber.log > log/development.log'
 

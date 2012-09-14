@@ -28,6 +28,9 @@ map <Leader>V :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 map <Leader>n :NERDTree <C-R>=expand("%:p:h") . "/" <CR>
 autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
 
+" Go to symbol
+nmap <leader>T :GotoSymbol<CR>
+
 " Unset highlighting
 nnoremap <Leader>h :nohls<CR><C-L>
 nmap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>

@@ -10,8 +10,8 @@
 --ignore-dir=tmp
 --ignore-dir=doc
 --ignore-dir=coverage
+--ignore-case
 --sort-files
 --color
 --follow
 --group
---context=3

@@ -14,4 +14,4 @@ safely run this file multiple times to update.
 Note to self:
 Installing submodules
 
-git add submodule-name vim/bundl
+git submodule add submodule-name vim/bundle

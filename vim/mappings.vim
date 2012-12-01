@@ -15,7 +15,9 @@ imap jj <Esc>
 imap kk <Esc>
 
 " Use command t
-map <Leader>g :CommandT<CR>
+map <leader>g :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+map <leader>ga :CommandTFlush<cr>\|:CommandT app/assets/<cr>
 
 " Opens an edit command with the path of the currently edited file filled in
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>

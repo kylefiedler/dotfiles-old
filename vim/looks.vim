@@ -13,6 +13,7 @@ set cursorline                    " highlight cursor line
 set listchars=tab:>\ ,trail:•,extends:>,precedes:<,nbsp:+
 set list                          " show trailing whiteshace and tabs
 
+let g:Powerline_colorscheme = 'solarized'
 
 if has('gui_running')
   set guioptions-=T
@@ -22,11 +23,11 @@ if has('gui_running')
   set guioptions-=R
   set guioptions-=L
   set mousehide
-  set guifont=Anonymous\ Pro:h18
+  set guifont=Anonymous\ Pro:h20
 "  set guifont=Inconsolata:h18
   set t_Co=256
   set background=light
-  :colorscheme Tomorrow-Night
+  :colorscheme solarized
 endif
 
 " Numbers

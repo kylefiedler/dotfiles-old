@@ -61,10 +61,10 @@ setopt auto_pushd
 export dirstacksize=5
 
 # Allows me to cd into projects
-cdpath=(. ~/Sites/ ~/Sites/other/ )
+cdpath=(. ~/Development/ )
 typeset -gU cdpath
 
-PATH=/usr/local/bin:~/bin:~/bin/scripts:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
+PATH=/usr/local/bin:/usr/local/Cellar/python/2.7/bin:~/.bin:$PATH
 
 if [[ -s /Users/kfiedler/.rvm/scripts/rvm ]] ; then source /Users/kfiedler/.rvm/scripts/rvm ; fi
 

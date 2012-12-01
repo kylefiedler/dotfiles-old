@@ -11,4 +11,4 @@ cmap ppp <C-r>"
 noremap p p=']
 
 "Copy to OS clipboard
-set clipboard=unnamed
+"set clipboard=unnamed

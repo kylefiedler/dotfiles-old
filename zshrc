@@ -4,8 +4,9 @@ fpath=(~/.zsh/completion $fpath)
 # automatically enter directories without cd
 setopt auto_cd
 
-# use vim as an editor
-export EDITOR=vim
+# use MacVim as an editor
+export EDITOR=mvim
+export VISUAL=mvim
 
 # aliases
 if [ -e "$HOME/.aliases" ]; then
@@ -64,9 +65,9 @@ export dirstacksize=5
 cdpath=(. ~/Development/ )
 typeset -gU cdpath
 
-PATH=/usr/local/bin:/usr/local/Cellar/python/2.7/bin:~/.bin:$PATH
+if [[ -s /Users/kylefiedler/.rvm/scripts/rvm ]] ; then source /Users/kylefiedler/.rvm/scripts/rvm ; fi
 
-if [[ -s /Users/kfiedler/.rvm/scripts/rvm ]] ; then source /Users/kfiedler/.rvm/scripts/rvm ; fi
+PATH=/usr/local/bin:/usr/bin:/usr/local/Cellar/python/2.7/bin:~/.bin:$PATH
 
 # awesome cd movements from zshkit
 setopt AUTOCD

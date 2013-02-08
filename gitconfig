@@ -1,8 +1,6 @@
 # ADD LOCAL CONFIGURATION HERE
 [github]
 	user = kylefiedler
-
-# DO NOT EDIT BELOW THIS LINE
 [push]
   default = current
 [color]
@@ -11,37 +9,43 @@
   branch = auto
 [core]
   excludesfile = ~/.gitignore
+  editor = '/usr/local/bin/mvim'
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
 [alias]
-  c = commit -m
+  c = commit
+  l = log
   a = add
   aa= !git add -u && git add . && git status
-  di = diff
-  dic = diff --cached
+  d = diff
+  dt = difftool
+  mt = mergetool
   pl = pull
   ps = push
-  plre = pull --rebase
+  pr = pull --rebase
   st = status
   out = log origin..HEAD
   qpl = log --pretty=\"%Cblue%h%Creset %Cgreen[%cr]%Creset %s\" origin/production..origin/master
   graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-  ci = commit
-  ca = commit --amend -C HEAD
+  cm = commit -m
+  ca = commit --amend
   cleanup = !git remote prune origin && git gc && git clean -dfx && git stash clear
   up = !git fetch origin && git rebase origin/master
-  done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && rake && git push
-  down = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && rake && git push
   ir = !git rebase -i origin/master
   who = shortlog -n -s --no-merges
   unfuck = reset --hard HEAD
+  rollback = reset --hard HEAD~1
+  co = checkout
   cob = checkout -b
-  rmb = !sh -c 'git branch -D $1 && git push origin :$1' -
-
+  cp = cherry-pick
+  reviewtool = !sh -c 'SHA=${1:-HEAD}; BRANCH=${2:-master}; if [ $SHA == $BRANCH ] ; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA;' -
+  showtool = !sh -c 'SHA=${1:-HEAD}; git difftool -y -t Kaleidoscope $SHA^..$SHA;' -
 [user]
   name = Kyle Fiedler
-  email = kfiedler@thoughtbot.com
+  email = kyle@kylefiedler.com
 [branch "master"]
   rebase = true
 [remote "origin"]
   push = HEAD
+[mergetool]
+  keepBackup = false

@@ -16,8 +16,8 @@ imap kk <Esc>
 
 " Use command t
 map <leader>g :CommandTFlush<cr>\|:CommandT<cr>
-map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-map <leader>ga :CommandTFlush<cr>\|:CommandT app/assets/<cr>
+"map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+"map <leader>ga :CommandTFlush<cr>\|:CommandT app/assets/<cr>
 
 " Opens an edit command with the path of the currently edited file filled in
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
@@ -49,6 +49,12 @@ vmap <Leader>1 :!sort<CR>
 map <Leader>2 ?{<CR>jV}k!sortcss<CR>:noh<CR>
 map <Leader>3 !sortcss<CR>
 map <Leader>4 :g#\({\n\)\@<=#.,/}/sort<CR>
+
+" Indent like textmate
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>

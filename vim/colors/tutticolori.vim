@@ -33,6 +33,7 @@ highlight Comment                   guifg=#999999 guibg=#eeeeee gui=italic
 highlight Constant                  guifg=#d44950 guibg=NONE
 highlight Error                     guifg=#f9f2ce guibg=#f9323a
 highlight Identifier                guifg=#3a1d72 guibg=NONE              
+highlight Function                  guifg=#3a1d72 guibg=NONE              
 highlight Number                    guifg=#7653c1 guibg=#f3f2ff
 highlight PreProc                   guifg=#222222 guibg=#eeeeee
 highlight Special                   guifg=#2f6f9f guibg=NONE              

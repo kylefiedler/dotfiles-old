@@ -1,8 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/kfiedler/Sites/other/muller-brockmann/stylesheets/sass/base'
 let g:netrw_dirhist_2='/Users/kfiedler/Sites/trail-map/trails'
 let g:netrw_dirhist_3='/Users/kylefiedler/Desktop/fever'
 let g:netrw_dirhist_4='/Users/kylefiedler/Development/companion'
 let g:netrw_dirhist_5='/Users/kylefiedler/Development/kylefiedler.github.com/tumblr'
 let g:netrw_dirhist_6='/Users/kylefiedler/Development/turpentine'
+let g:netrw_dirhist_7='/Users/kylefiedler/Development/kylefiedler.github.com'
+let g:netrw_dirhist_8='/Users/kylefiedler/Desktop/design for developers'
+let g:netrw_dirhist_9='/Users/kylefiedler/Desktop/design-for-developers'

@@ -7,6 +7,7 @@ setopt auto_cd
 # use MacVim as an editor
 export EDITOR=mvim
 export VISUAL=mvim
+export GIT_EDITOR='/usr/local/bin/mvim -f'
 
 # aliases
 if [ -e "$HOME/.aliases" ]; then
@@ -67,7 +68,7 @@ typeset -gU cdpath
 
 if [[ -s /Users/kylefiedler/.rvm/scripts/rvm ]] ; then source /Users/kylefiedler/.rvm/scripts/rvm ; fi
 
-PATH=/usr/local/bin:/usr/bin:/usr/local/Cellar/python/2.7/bin:~/.bin:$PATH
+PATH=/usr/local/bin:~/bin:~/bin/scripts:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
 
 # awesome cd movements from zshkit
 setopt AUTOCD
@@ -181,3 +182,6 @@ EOF
 EOF
   }
 }
+
+# RVM
+[[ -s '/Users/kylefiedler/.rvm/scripts/rvm' ]] && source '/Users/kylefiedler/.rvm/scripts/rvm'

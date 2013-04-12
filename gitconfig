@@ -9,7 +9,6 @@
   branch = auto
 [core]
   excludesfile = ~/.gitignore
-  editor = '/usr/local/bin/mvim'
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
 [alias]
@@ -49,3 +48,15 @@
   push = HEAD
 [mergetool]
   keepBackup = false
+	prompt = false
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[merge]
+	tool = Kaleidoscope

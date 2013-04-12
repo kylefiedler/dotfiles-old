@@ -17,6 +17,7 @@ function rc {
     script/console $@
   fi
 }
+
 function rg {
   if [ -e script/rails ]; then
     script/rails generate $@
@@ -31,8 +32,4 @@ function rake {
   else
     command rake $@
   fi
-}
-
-function :w {
-  print 'This is not vim'
 }

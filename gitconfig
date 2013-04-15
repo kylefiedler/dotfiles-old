@@ -33,7 +33,7 @@
   ir = !git rebase -i origin/master
   who = shortlog -n -s --no-merges
   unfuck = reset --hard HEAD
-  rollback = reset --hard HEAD~1
+  goddammit = reset --hard HEAD~1
   co = checkout
   cob = checkout -b
   cp = cherry-pick

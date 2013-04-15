@@ -182,6 +182,3 @@ EOF
 EOF
   }
 }
-
-# RVM
-[[ -s '/Users/kylefiedler/.rvm/scripts/rvm' ]] && source '/Users/kylefiedler/.rvm/scripts/rvm'

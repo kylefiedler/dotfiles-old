@@ -1,5 +1,4 @@
 # ~/.aliases
-alias vim="mvim"
 alias b="bundle"
 alias be='bundle exec'
 alias bake='bundle exec rake'
@@ -43,7 +42,7 @@ alias gup='git fetch origin && git rebase origin/master'
 alias gcl='git clean -f -d'
 alias gl='git log'
 alias gcp='git cherry-pick'
-alias gresetH='git reset --hard HEAD~1'
+alias gm='git merge'
 
 # Other
 alias ln='ln -v'

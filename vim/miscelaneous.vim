@@ -30,12 +30,6 @@ let g:rubycomplete_rails = 1
 "clojure.vim
 let clj_highlight_builtins = 1
 
-" Set zen coding to new shortcut
-let g:user_zen_expandabbr_key = '<c-z>'
-let g:user_zen_settings = {
-\  'indentation' : ' '
-\}
-
 " Set ruby syntax for Gemfile
 autocmd BufNewFile,BufRead Gemfile setlocal filetype=ruby
 autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
@@ -64,7 +58,6 @@ autocmd BufEnter *.html.erb setlocal cursorcolumn
 autocmd BufEnter *.html setlocal cursorcolumn
 autocmd BufEnter *.jst setlocal cursorcolumn
 
-
 " Show syntax highlighting groups for word under cursor
 " http://vimcasts.org/episodes/creating-colorschemes-for-vim/
 nmap <C-S-P> :call <SID>SynStack()<CR>
@@ -92,3 +85,4 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.scssc

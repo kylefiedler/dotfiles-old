@@ -68,8 +68,11 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-" switch between last two files
-nnoremap <Leader><Leader> <C-^>
+" Set zen coding to new shortcut
+let g:user_zen_expandabbr_key = '<c-e>'
+let g:user_zen_settings = {
+\  'indentation' : ' '
+\}
 
 " Auto complete option for snipmate
 let g:acp_behaviorSnipmateLength = 1

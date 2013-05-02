@@ -40,6 +40,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-scripts/tComment'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Raimondi/delimitMate'
+Bundle 'vim-scripts/AutoComplPop'
 
 " Snipmate dependencies:
 Bundle "MarcWeber/vim-addon-mw-utils"

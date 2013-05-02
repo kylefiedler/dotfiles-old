@@ -71,6 +71,9 @@ endfunc
 " switch between last two files
 nnoremap <Leader><Leader> <C-^>
 
+" Auto complete option for snipmate
+let g:acp_behaviorSnipmateLength = 1
+
 " remove trailing whitespace
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.

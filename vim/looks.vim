@@ -9,9 +9,20 @@ set ruler                         " always show the cursor position
 set showmatch                     " show matching brackets.
 set mat=5                         " bracket blinking.
 set laststatus=2                  " always show status line (not only for multiple windows)
-set cursorline                    " highlight cursor line
 set listchars=tab:>\ ,trail:•,extends:>,precedes:<,nbsp:+
 set list                          " show trailing whiteshace and tabs
+
+" Numbers
+set number
+set numberwidth=4
+
+" Highlight cursor Line + Column
+set cursorline
+set cursorcolumn
+"
+" Open widnow below
+set splitbelow
+set splitright
 
 if has('gui_running')
   set guioptions-=T
@@ -23,14 +34,8 @@ if has('gui_running')
   set guioptions+=c
   set mousehide
   set guifont=Anonymous\ Pro:h22
-"  let g:Powerline_colorscheme = 'solarized256'
   let g:Powerline_colorscheme = 'solarized'
   set t_Co=256
   set background=light
   :colorscheme solarized
 endif
-
-" Numbers
-set number                     " Normal Absolute line numbers by default
-"set relativenumber              " Relative Line Numbers by default
-set numberwidth=4               "set relativenumber

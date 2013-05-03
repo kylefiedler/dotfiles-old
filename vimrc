@@ -47,6 +47,11 @@ set wildignore+=log/**,tmp/**,cache/**
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.avi,*.wmv,*.ogg,*.mp3,*.mov
 
+" Use Ag (https://github.com/ggreer/the_silver_searcher) instead of Grep when available
+if executable("ag")
+  set grepprg=ag\ --noheading\ --nogroup\ --nocolor
+ endif
+
 " Paste
 """""""""""""""""""""""""""""""""
 " paste in INSERT mode from Vim's clipboard (unnamed register)

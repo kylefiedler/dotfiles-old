@@ -19,6 +19,9 @@ nmap <Leader>n :NERDTreeToggle<cr>
 " CtrlP
 map <Leader>g :CtrlP <CR>
 
+" Ag
+map <Leader>a :Ag
+
 " Indent
 nmap <leader>i ==
 vmap <leader>i ==

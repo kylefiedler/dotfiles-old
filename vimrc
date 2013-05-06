@@ -36,14 +36,14 @@ set expandtab
 set wildignore+=*.sw?
 set wildignore+=.git,.svn
 set wildignore+=*.zip,*.gz,*.bz,*.tar
-set wildignore=*.pyc,*.pyo,*.o,*.obj,*~
-set wildignore+=*vim/backups*
-set wildignore+=.sass-cache/**
+set wildignore+=*.pyc,*.pyo,*.o,*.obj,*~
+set wildignore+=*/vim/backups/*
+set wildignore+=*/.sass-cache/*,*.scssc
 set wildignore+=*DS_Store*
-set wildignore+=vendor/rails/**,vendor/cache/**
+set wildignore+=*/vendor/rails/*,*/vendor/cache/*
 set wildignore+=*.gem
-set wildignore+=_site/**
-set wildignore+=log/**,tmp/**,cache/**
+set wildignore+=*/_site/*
+set wildignore+=*/log/*,*/tmp/*,*/cache/*
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.avi,*.wmv,*.ogg,*.mp3,*.mov
 
@@ -69,7 +69,7 @@ set clipboard=unnamed
 " Set filetype and omnicompletion
 """""""""""""""""""""""""""""""""
 if has("autocmd")
-  autocmd FileType html, markdown, erb setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType html, markdown, php, erb setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType css, scss, sass setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
@@ -84,6 +84,9 @@ if has("autocmd")
 
   " erb to html
   au BufNewFile,BufRead *.html.erb set filetype=html        " Set ERB filetype to HTML
+
+  " PHP like HTML
+  autocmd bufnewfile,bufread *.php set ft=php.html syntax=html
 endif
 
 """""""""""""""""""""""""""""""""
@@ -113,6 +116,7 @@ Bundle 'kchmck/vim-coffee-script'
 
 " Utilities
 Bundle 'mattn/zencoding-vim'
+Bundle 'rking/ag.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
@@ -123,6 +127,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'honza/vim-snippets'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
+Bundle 'vim-scripts/auto_mkdir'
 
 filetype plugin indent on
 

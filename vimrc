@@ -11,6 +11,7 @@ set showcmd                       " display incomplete commands
 set ttimeoutlen=50                " Speed up <esc>
 set spell                         " I carnt spelll
 set tabstop=2 shiftwidth=2 expandtab " Set two space tabs:
+set iskeyword+=-
 
 " Searching
 """""""""""""""""""""""""""""""""
@@ -52,6 +53,7 @@ if executable("ag")
   set grepprg=ag\ --noheading\ --nogroup\ --nocolor
  endif
 
+
 " Paste
 """""""""""""""""""""""""""""""""
 " paste in INSERT mode from Vim's clipboard (unnamed register)
@@ -69,9 +71,12 @@ set clipboard=unnamed
 " Set filetype and omnicompletion
 """""""""""""""""""""""""""""""""
 if has("autocmd")
-  autocmd FileType html, markdown, php, erb setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType erb setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType php setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType css, scss, sass setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType scss setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
   " Make CSS omnicompletion work for SASS and SCSS
@@ -102,7 +107,7 @@ Bundle 'gmarik/vundle'
 " Colors
 Bundle 'altercation/solarized', {'rtp': 'vim-colors-solarized/'}
 Bundle 'DAddYE/soda.vim'
-Bundle 'vim-scripts/TuttiColori-Colorscheme'
+Bundle 'kylefiedler/TuttiColori-Colorscheme'
 Bundle 'chriskempson/vim-tomorrow-theme'
 
 " Syntax
@@ -119,15 +124,17 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'rking/ag.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-surround'
+Bundle 'tsaleh/vim-matchit'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-scripts/tComment'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Raimondi/delimitMate'
-Bundle 'honza/vim-snippets'
+Bundle 'kylefiedler/vim-snippets'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'vim-scripts/auto_mkdir'
+Bundle 'majutsushi/tagbar'
 
 filetype plugin indent on
 
@@ -168,6 +175,8 @@ let g:user_zen_expandabbr_key = '<c-e>'
 let g:user_zen_settings = {
 \  'indentation' : ' '
 \}
+
+let delimitMate_expand_cr = 1
 
 source $HOME/.vim/looks.vim
 source $HOME/.vim/mappings.vim

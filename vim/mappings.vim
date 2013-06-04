@@ -19,6 +19,17 @@ nmap <Leader>n :NERDTreeToggle<cr>
 " CtrlP
 map <Leader>g :CtrlP <CR>
 
+" GotoSymbol
+nmap <leader>t :TagbarToggle<CR>
+let g:tagbar_type_css = {
+\ 'ctagstype' : 'Css',
+  \ 'kinds'     : [
+  \ 'c:classes',
+  \ 's:selectors',
+  \ 'i:identities'
+  \ ]
+\ }
+
 " Ag
 map <Leader>a :Ag
 

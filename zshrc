@@ -4,10 +4,10 @@ fpath=(~/.zsh/completion $fpath)
 # automatically enter directories without cd
 setopt auto_cd
 
-# use MacVim as an editor
-export EDITOR=mvim
-export VISUAL=mvim
-export GIT_EDITOR='/usr/local/bin/mvim -f'
+# use Vim as an editor
+export EDITOR=vim
+export VISUAL=vim
+export GIT_EDITOR=vim
 
 # aliases
 if [ -e "$HOME/.aliases" ]; then

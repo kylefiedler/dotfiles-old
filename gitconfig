@@ -15,6 +15,7 @@
   c = commit
   l = log
   a = add
+  m = merge --ff-only
   aa= !git add -u && git add . && git status
   d = diff
   dt = difftool

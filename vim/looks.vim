@@ -14,7 +14,8 @@ set list                          " show trailing whiteshace and tabs
 
 " Numbers
 set number
-set numberwidth=4
+set relativenumber
+set numberwidth=2
 
 " Highlight cursor Line + Column
 set cursorline
@@ -33,7 +34,7 @@ if has('gui_running')
   set guioptions-=L
   set guioptions+=c
   set mousehide
-  set guifont=Anonymous\ Pro:h22
+  set guifont=Anonymous\ Pro:h20
   let g:Powerline_colorscheme = 'solarized'
   set t_Co=256
   set background=light

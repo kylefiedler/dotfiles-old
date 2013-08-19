@@ -8,13 +8,13 @@ alias gi="gem install"
 alias tlf="tail -f"
 alias fs="foreman start"
 alias rs="rails s"
-alias js="jekyll --server"
+alias js="jekyll serve -w"
 
 # Git shortcuts
 alias g='git'
 alias got='git'
 alias get='git'
-alias ga='git add .'
+alias ga='git add . && git status'
 alias gaa='git add -A && git status'
 alias gb='git branch'
 alias gbd='git branch -D'
@@ -23,6 +23,7 @@ alias gcol='git checkout -'
 alias gcom='git checkout master'
 alias gac='git commit -a'
 alias gc='git commit'
+alias gcm='git commit -m'
 alias gcam='git commit --amend'
 alias gpp="git pull --rebase && git push"
 alias gp="git push"

@@ -80,8 +80,7 @@ if has("autocmd")
   autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
   " Make CSS omnicompletion work for SASS and SCSS
-  autocmd bufnewfile,bufread *.scss set ft=scss.css
-  autocmd bufnewfile,bufread *.sass set ft=sass.css
+  au BufRead,BufNewFile *.scss set ft=scss.css
 
   " Make jQuery omnicompletion work for javascript files
   autocmd BufNewFile,BufRead jquery.*.js set ft=javascript syntax=jquery
@@ -116,8 +115,9 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-cucumber'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-fugitive'
 
 " Utilities
 Bundle 'mattn/zencoding-vim'
@@ -135,6 +135,8 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'vim-scripts/auto_mkdir'
 Bundle 'majutsushi/tagbar'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-session'
 
 filetype plugin indent on
 
@@ -176,7 +178,26 @@ let g:user_zen_settings = {
 \  'indentation' : ' '
 \}
 
+"Configure ctrlp for SPEED
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_use_caching = 0
+
 let delimitMate_expand_cr = 1
+
+" Tagbar CSS
+let g:tagbar_type_css = {
+  \ 'ctagstype' : 'Css',
+  \ 'kinds'     : [
+    \ 'c:classes',
+    \ 's:selectors',
+    \ 'i:identities'
+  \ ]
+\ }
+
+" Session manager
+let g:session_autosave = 'yes'
+let g:session_autoload = 'yes'
+let g:session_default_to_last = 1
 
 source $HOME/.vim/looks.vim
 source $HOME/.vim/mappings.vim

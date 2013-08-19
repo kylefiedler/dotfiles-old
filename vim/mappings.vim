@@ -7,38 +7,45 @@ imap kj <Esc>kj
 imap jj <Esc>jj
 imap kk <Esc>kk
 
+" Clear search
+nmap <silent> ,/ :nohlsearch<CR>
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Faster new buffers
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 map <Leader>s :split <CR> :CtrlP <CR>
 map <Leader>S :split <C-R>=expand("%:p:h") . "/" <CR>
 map <Leader>v :vsplit <CR> :CtrlP <CR>
 map <Leader>V :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 
+
+nmap <Leader>i ==
+vmap <Leader>i ==
+
+" Saves time
+nmap <return> :
 " NERDTree
 nmap <Leader>n :NERDTreeToggle<cr>
 
 " CtrlP
 map <Leader>g :CtrlP <CR>
+nnoremap <leader>t :CtrlPTag<cr>
+
+" Open goto file
+" nmap <D-t> :CtrlP<cr>
+" imap <D-t> <esc>:CtrlP<cr>
 
 " GotoSymbol
-nmap <leader>t :TagbarToggle<CR>
-let g:tagbar_type_css = {
-\ 'ctagstype' : 'Css',
-  \ 'kinds'     : [
-  \ 'c:classes',
-  \ 's:selectors',
-  \ 'i:identities'
-  \ ]
-\ }
+nmap <Leader>tt :TagbarToggle<CR>
+
 
 " Ag
-map <Leader>a :Ag
-
-" Indent
-nmap <leader>i ==
-vmap <leader>i ==
-
-" Saves time
-nmap <return> :
+map <Leader>a :Ag 
 
 " Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
 nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
@@ -48,13 +55,19 @@ nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 " Sorting
 vmap <Leader>1 :!sort<CR>
-map <Leader>2 ?{<CR>jV}k!sortcss<CR>:noh<CR>
+" map <Leader>2 ?{<CR>jV}k!sortcss<CR>:noh<CR>
+map <Leader>2 ?{<CR>jV/^\s*\}\=$<CR>k:sort<CR>:let @/=''<CR>
+map <Leader>4 :g#\({\n\)\@<=#.,/}/sort<CR>
 
 " Indent like textmate
 nmap <D-[> <<
 nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
+
+" Comment lines with cmd+/
+map <D-/> :TComment<cr>
+vmap <D-/> :TComment<cr>gv
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>

@@ -9,6 +9,7 @@ alias tlf="tail -f"
 alias fs="foreman start"
 alias rs="rails s"
 alias js="jekyll serve -w"
+alias ms="middleman server"
 
 # Git shortcuts
 alias g='git'

@@ -88,6 +88,7 @@ if has("autocmd")
 
   " erb to html
   au BufNewFile,BufRead *.html.erb set filetype=html        " Set ERB filetype to HTML
+  au BufNewFile,BufRead *.erb set filetype=html        " Set ERB filetype to HTML
 
   " PHP like HTML
   autocmd bufnewfile,bufread *.php set ft=php.html syntax=html
@@ -118,6 +119,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
 
 " Utilities
 Bundle 'mattn/zencoding-vim'
@@ -134,9 +136,6 @@ Bundle 'kylefiedler/vim-snippets'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'vim-scripts/auto_mkdir'
-Bundle 'majutsushi/tagbar'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-session'
 
 filetype plugin indent on
 
@@ -145,7 +144,7 @@ let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_min_syntax_length = 2
+let g:neocomplcache_min_syntax_length = 1
 let g:neocomplcache_max_list = 10
 let g:neocomplcache_auto_completion_start_length = 2
 let g:neocomplcache_force_overwrite_completefunc = 1
@@ -183,21 +182,6 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
 let delimitMate_expand_cr = 1
-
-" Tagbar CSS
-let g:tagbar_type_css = {
-  \ 'ctagstype' : 'Css',
-  \ 'kinds'     : [
-    \ 'c:classes',
-    \ 's:selectors',
-    \ 'i:identities'
-  \ ]
-\ }
-
-" Session manager
-let g:session_autosave = 'yes'
-let g:session_autoload = 'yes'
-let g:session_default_to_last = 1
 
 source $HOME/.vim/looks.vim
 source $HOME/.vim/mappings.vim

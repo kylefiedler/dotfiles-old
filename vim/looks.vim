@@ -14,7 +14,7 @@ set list                          " show trailing whiteshace and tabs
 
 " Numbers
 set number
-" set relativenumber
+set relativenumber
 set numberwidth=2
 
 " Highlight cursor Line + Column

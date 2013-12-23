@@ -1,14 +1,14 @@
-" Set Leader to <spacebar>
+" Set leader to <spacebar>
 let mapleader = " "
 
 " Go back to normal mode with jk OR kj OR jj OR kk
-imap jk <Esc>jk
-imap kj <Esc>kj
-imap jj <Esc>jj
-imap kk <Esc>kk
+imap jk <Esc>j
+imap kj <Esc>k
+imap jj <Esc>j
+imap kk <Esc>k
 
 " Clear search
-nmap <silent> ,/ :nohlsearch<CR>
+nmap <leader>h :nohlsearch<CR>
 
 " Easy window navigation
 map <C-h> <C-w>h
@@ -17,47 +17,43 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Faster new buffers
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-map <Leader>s :split <CR> :CtrlP <CR>
-map <Leader>S :split <C-R>=expand("%:p:h") . "/" <CR>
-map <Leader>v :vsplit <CR> :CtrlP <CR>
-map <Leader>V :vsplit <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>s :split <CR> :CtrlP <CR>
+map <leader>S :split <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>v :vsplit <CR> :CtrlP <CR>
+map <leader>V :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 
-
-nmap <Leader>i ==
-vmap <Leader>i ==
+" Quickly indent
+nmap <leader>i mmgg=G`m
+vmap <leader>i mmgg=G`m
 
 " Saves time
 nmap <return> :
+
 " NERDTree
-nmap <Leader>n :NERDTreeToggle<cr>
+nmap <leader>n :NERDTreeToggle<cr>
 
 " CtrlP
-map <Leader>g :CtrlP <CR>
-nnoremap <leader>t :CtrlPTag<cr>
+map <leader>g :CtrlP <CR>
 
 " Open goto file
 " nmap <D-t> :CtrlP<cr>
 " imap <D-t> <esc>:CtrlP<cr>
 
-" GotoSymbol
-nmap <Leader>tt :TagbarToggle<CR>
-
-
 " Ag
-map <Leader>a :Ag 
+map <leader>a :Ag 
 
 " Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
-nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
-nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
-nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
-nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+nnoremap <silent><A-o> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><A-O> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><C-o> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><C-O> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 " Sorting
-vmap <Leader>1 :!sort<CR>
-" map <Leader>2 ?{<CR>jV}k!sortcss<CR>:noh<CR>
-map <Leader>2 ?{<CR>jV/^\s*\}\=$<CR>k:sort<CR>:let @/=''<CR>
-map <Leader>4 :g#\({\n\)\@<=#.,/}/sort<CR>
+vmap <leader>1 :!sort<CR>
+" map <leader>2 ?{<CR>jV}k!sortcss<CR>:noh<CR>
+map <leader>2 ?{<CR>jV/^\s*\}\=$<CR>k:sort<CR>:let @/=''<CR>
+map <leader>4 :g#\({\n\)\@<=#.,/}/sort<CR>
 
 " Indent like textmate
 nmap <D-[> <<

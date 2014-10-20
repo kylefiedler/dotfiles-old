@@ -47,12 +47,12 @@ set wildignore+=*/_site/*
 set wildignore+=*/log/*,*/tmp/*,*/cache/*
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.avi,*.wmv,*.ogg,*.mp3,*.mov
+set wildignore+=*/build/*
 
 " Use Ag (https://github.com/ggreer/the_silver_searcher) instead of Grep when available
 if executable("ag")
   set grepprg=ag\ --noheading\ --nogroup\ --nocolor
  endif
-
 
 " Paste
 """""""""""""""""""""""""""""""""
@@ -66,32 +66,55 @@ cmap ppp <C-r>"
 noremap p p=']
 
 "Copy to OS clipboard
-set clipboard=unnamed
+"set clipboard=unnamed
+
+filetype plugin indent on
 
 " Set filetype and omnicompletion
 """""""""""""""""""""""""""""""""
 if has("autocmd")
-  autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType erb setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType php setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType scss setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-
-  " Make CSS omnicompletion work for SASS and SCSS
-  au BufRead,BufNewFile *.scss set ft=scss.css
-
-  " Make jQuery omnicompletion work for javascript files
   autocmd BufNewFile,BufRead jquery.*.js set ft=javascript syntax=jquery
+  autocmd BufNewFile,BufRead *.scss set ft=scss syntax=scss
+  autocmd BufNewFile,BufRead *.svg set ft=xml syntax=svg
+  autocmd BufNewFile,BufRead *.erb set filetype=html " Set ERB filetype to HTML
+  autocmd BufRead,BufEnter Brewfile set ft=conf
   autocmd BufRead *.json set ft=javascript
 
+  autocmd FileType html,markdown,erb setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType css,css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
+  " Markdown
+  autocmd BufRead,BufNewFile *.md,*.markdown,*.mkdn setlocal spell filetype=ghmarkdown textwidth=80
+
+  " Indentation
+  autocmd BufNewFile,BufReadPost *.coffee setlocal foldmethod=indent
+  autocmd BufRead,BufNewFile *.css,*.scss setlocal foldmethod=marker foldmarker={,}
+
+"   autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+"   autocmd FileType erb setlocal omnifunc=htmlcomplete#CompleteTags
+"   autocmd FileType php setlocal omnifunc=htmlcomplete#CompleteTags
+"   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+"   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+"   autocmd FileType scss setlocal omnifunc=csscomplete#CompleteCSS
+"   autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
+  " Make CSS omnicompletion work for SASS and SCSS
+  " au BufRead,BufNewFile *.scss set ft=scss.css
+
+  " Make jQuery omnicompletion work for javascript files
+  " autocmd BufNewFile,BufRead jquery.*.js set ft=javascript syntax=jquery
+  " autocmd BufRead *.json set ft=javascript
+
   " erb to html
-  au BufNewFile,BufRead *.html.erb set filetype=html        " Set ERB filetype to HTML
-  au BufNewFile,BufRead *.erb set filetype=html        " Set ERB filetype to HTML
+  " au BufNewFile,BufRead *.html.erb set filetype=html        " Set ERB filetype to HTML
 
   " PHP like HTML
-  autocmd bufnewfile,bufread *.php set ft=php.html syntax=html
+  " autocmd bufnewfile,bufread *.php set ft=php.html syntax=html
+
+  " Remove trailing spaces
+  autocmd BufWritePre * :%s/\s\+$//e
 endif
 
 """""""""""""""""""""""""""""""""
@@ -105,13 +128,17 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Colors
-Bundle 'altercation/solarized', {'rtp': 'vim-colors-solarized/'}
-Bundle 'DAddYE/soda.vim'
-Bundle 'kylefiedler/TuttiColori-Colorscheme'
-Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'chmllr/elrodeo-colorscheme'
+Bundle 'jordwalke/flatlandia'
+Bundle 'ChrisKempson/Vim-Tomorrow-Theme'
+Bundle 'jonathanfilip/lucius'
+Bundle 'junegunn/seoul256.vim'
+Bundle 'kylefiedler/base16-vim'
 
 " Syntax
 Bundle 'othree/html5.vim'
+Bundle 'JulesWang/css.vim'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'tpope/vim-rails'
@@ -120,68 +147,36 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
+Bundle 'nono/jquery.vim'
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
 
 " Utilities
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'rking/ag.vim'
+Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-surround'
-Bundle 'tsaleh/vim-matchit'
+Bundle 'vim-scripts/matchit.zip'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'vim-scripts/tComment'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Raimondi/delimitMate'
+Bundle 'vim-scripts/Auto-Pairs'
+Bundle 'vim-scripts/L9'
+Bundle 'othree/vim-autocomplpop'
+Bundle 'pbrisbin/vim-rename-file'
+Bundle 'tomtom/tcomment_vim'
+
+" Snippets
+Bundle 'SirVer/ultisnips'
 Bundle 'kylefiedler/vim-snippets'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neosnippet'
 Bundle 'vim-scripts/auto_mkdir'
-
-filetype plugin indent on
-
-" Neocomplcache options
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_min_syntax_length = 1
-let g:neocomplcache_max_list = 10
-let g:neocomplcache_auto_completion_start_length = 2
-let g:neocomplcache_force_overwrite_completefunc = 1
-let g:neocomplcache_enable_auto_select = 1
-
-" Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
-
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-      \ "\<Plug>(neosnippet_expand_or_jump)"
-      \: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-      \ "\<Plug>(neosnippet_expand_or_jump)"
-      \: "\<TAB>"
-
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
-
-" Set zen coding to new shortcut
-let g:user_zen_expandabbr_key = '<c-e>'
-let g:user_zen_settings = {
-\  'indentation' : ' '
-\}
 
 "Configure ctrlp for SPEED
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
-let delimitMate_expand_cr = 1
-
 source $HOME/.vim/looks.vim
 source $HOME/.vim/mappings.vim
+
+" Remove commenting on next line
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

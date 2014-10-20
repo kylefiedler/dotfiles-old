@@ -10,33 +10,36 @@ set showmatch                     " show matching brackets.
 set mat=5                         " bracket blinking.
 set laststatus=2                  " always show status line (not only for multiple windows)
 set listchars=tab:>\ ,trail:•,extends:>,precedes:<,nbsp:+
-set list                          " show trailing whiteshace and tabs
+set list                          " show trailing whitespace and tabs
 
 " Numbers
 set number
-set relativenumber
-set numberwidth=2
+set numberwidth=3
 
 " Highlight cursor Line + Column
 set cursorline
-set cursorcolumn
-"
-" Open widnow below
+
+" Open window below
 set splitbelow
 set splitright
 
 if has('gui_running')
+  set t_Co=256
   set guioptions-=T
   set guioptions-=m
   set guioptions-=l
   set guioptions-=r
   set guioptions-=R
   set guioptions-=L
+  set guifont=Input\ Mono:h18
+  set linespace=8
+  " let g:airline_powerline_fonts = 1
+  let g:airline_left_sep = ''
+  let g:airline_left_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline_right_sep = ''
   set guioptions+=c
   set mousehide
-  set guifont=Anonymous\ Pro:h20
-  let g:Powerline_colorscheme = 'solarized'
-  set t_Co=256
   set background=light
   :colorscheme solarized
 endif

@@ -68,7 +68,7 @@ typeset -gU cdpath
 
 if [[ -s /Users/kylefiedler/.rvm/scripts/rvm ]] ; then source /Users/kylefiedler/.rvm/scripts/rvm ; fi
 
-PATH=/usr/local/bin:~/bin:~/bin/scripts:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
+PATH=~/bin:~/bin/scripts:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:/usr/local/bin:$PATH
 
 # awesome cd movements from zshkit
 setopt AUTOCD
@@ -182,3 +182,5 @@ EOF
 EOF
   }
 }
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

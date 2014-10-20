@@ -1,4 +1,5 @@
 # ~/.aliases
+alias rake="bin/rake"
 alias b="bundle"
 alias be='bundle exec'
 alias bake='bundle exec rake'
@@ -10,6 +11,7 @@ alias fs="foreman start"
 alias rs="rails s"
 alias js="jekyll serve -w"
 alias ms="middleman server"
+alias pw="echo 'port: 7000' > .foreman && echo 7000 > ~/.pow/`basename $PWD`"
 
 # Git shortcuts
 alias g='git'
@@ -53,3 +55,4 @@ alias ...='../..'
 alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
+alias .='open .'

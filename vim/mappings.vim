@@ -8,7 +8,7 @@ imap jj <Esc>j
 imap kk <Esc>k
 
 " Clear search
-nmap <leader>h :nohlsearch<CR>
+nmap <leader>c :nohlsearch<CR>
 
 " Easy window navigation
 map <C-h> <C-w>h
@@ -35,13 +35,21 @@ nmap <leader>n :NERDTreeToggle<cr>
 
 " CtrlP
 map <leader>g :CtrlP <CR>
+map <D-p> :CtrlP <CR>
 
-" Open goto file
-" nmap <D-t> :CtrlP<cr>
-" imap <D-t> <esc>:CtrlP<cr>
+" Emmet Expand
+let g:user_emmet_expandabbr_key = '<c-e>'
+
+" Rename
+map <Leader>r :RenameFile<CR>
+
+" Buffer
+map <Leader><Leader> :bn
+map <Leader><S-Space> :bp
 
 " Ag
-map <leader>a :Ag 
+map <D-F> :Ag
+map <leader>a :Ag
 
 " Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
 nnoremap <silent><A-o> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
@@ -51,15 +59,18 @@ nnoremap <silent><C-O> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 " Sorting
 vmap <leader>1 :!sort<CR>
-" map <leader>2 ?{<CR>jV}k!sortcss<CR>:noh<CR>
 map <leader>2 ?{<CR>jV/^\s*\}\=$<CR>k:sort<CR>:let @/=''<CR>
-map <leader>4 :g#\({\n\)\@<=#.,/}/sort<CR>
 
 " Indent like textmate
 nmap <D-[> <<
 nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
+
+" Set ultisnips triggers
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Comment lines with cmd+/
 map <D-/> :TComment<cr>
@@ -71,12 +82,9 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" map tab to autocomplete
-imap <s-tab> <c-p>
-set complete=.,w,b,t
+" Move selection up/down (add =gv to reindent after move)
+map <D-C-Up> :m-2<CR>gv
+map <D-C-Down> :m'>+<CR>gv
 
-" omnicomplete
-imap <c-space> <c-x><c-o>
-
-" line complete
-imap <c-S-space> <c-x><c-l>
+" Search Dash
+nmap <silent> <leader>d <Plug>DashSearch
